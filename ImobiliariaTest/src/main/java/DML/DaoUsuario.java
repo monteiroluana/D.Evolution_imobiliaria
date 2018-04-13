@@ -8,6 +8,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public class DaoUsuario {
 
@@ -42,7 +46,7 @@ public class DaoUsuario {
         return lista;
     }
 
-    public void iserir(Usuario usuario) throws SQLException {
+    public boolean inserir(Usuario usuario) throws SQLException {
 
         String sql = "INSERT INTO imobiliariadb.USUARIO (nome,login,senha,grupoFilial,departamento,cargo) "
                 + "VALUES (?,?,?,?,?,?)";
@@ -65,7 +69,7 @@ public class DaoUsuario {
         } finally {
             conn.close();
         }
-
+        return true;
     }
 
     public void editar(Usuario usuario, int id) throws ClassNotFoundException, SQLException {
@@ -133,6 +137,10 @@ public class DaoUsuario {
         }
         return null;
 
+    }
+
+    public boolean inserir(com.JonasEnterpriseAssociation.Servlets.Usuario user) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

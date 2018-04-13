@@ -1,5 +1,6 @@
 package com.JonasEnterpriseAssociation.Servlets;
 
+import DML.DaoUsuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -19,6 +20,7 @@ public class computador extends HttpServlet {
             throws ServletException, IOException {
 
         Usuario user = new Usuario();
+        DaoUsuario daoUsuario = new DaoUsuario();
         boolean sit = false;
 
         //Adicionar na classe usuario
@@ -30,6 +32,9 @@ public class computador extends HttpServlet {
         try {
             //Inserindo no DB
             sit = user.adicionarUsuario();
+            sit = daoUsuario.inserir(user);
+            
+            
         } catch (SQLException ex) {
             Logger.getLogger(computador.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
