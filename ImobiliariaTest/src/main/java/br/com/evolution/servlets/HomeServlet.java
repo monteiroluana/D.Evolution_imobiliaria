@@ -21,6 +21,8 @@ public class HomeServlet extends HttpServlet{
 	   @Override
 	   protected void doGet(HttpServletRequest request, HttpServletResponse response)
 	           throws ServletException, IOException {
+		   //Caso a requisição foir GET cairá aqui
+		   
 		   //indica para qual jsp que vai
 		   RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/pages/index.jsp");
 	        
@@ -31,4 +33,10 @@ public class HomeServlet extends HttpServlet{
 		   dispatcher.forward(request, response);
 	        
 	   }
+	   
+	   @Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//caso a requisição for POST cairá aqui
+		super.doPost(req, resp);
+	}
 }
