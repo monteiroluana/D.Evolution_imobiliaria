@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Usuario;
 
 public class computador extends HttpServlet {
 
@@ -28,16 +29,18 @@ public class computador extends HttpServlet {
         user.setEmail(request.getParameter("email"));
         user.setLogin(request.getParameter("login"));
         user.setSenha(request.getParameter("senha"));
+        user.setDepartamento(request.getParameter("departamento"));
+        user.setGrupoFilial(request.getParameter("grupoFilial"));
+        user.setCargo(request.getParameter("cargo"));
+        
 
         try {
             //Inserindo no DB
-            sit = user.adicionarUsuario();
+            //sit = user.adicionarUsuario();
             sit = daoUsuario.inserir(user);
             
             
         } catch (SQLException ex) {
-            Logger.getLogger(computador.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
             Logger.getLogger(computador.class.getName()).log(Level.SEVERE, null, ex);
         }
 

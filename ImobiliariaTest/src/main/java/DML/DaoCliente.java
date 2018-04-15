@@ -93,7 +93,7 @@ public class DaoCliente {
             
             stmt.execute();
 
-        } catch (ClassNotFoundException | SQLException ex) {
+        } catch (SQLException ex) {
             System.err.println(ex.getMessage());
 
         } finally {

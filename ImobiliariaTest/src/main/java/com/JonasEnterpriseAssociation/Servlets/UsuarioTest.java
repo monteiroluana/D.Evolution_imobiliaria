@@ -13,7 +13,7 @@ import java.sql.SQLException;
  *
  * @author Jhonan
  */
-public class Usuario {
+public class UsuarioTest {
 
     String nome;
     String email;

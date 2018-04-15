@@ -1,9 +1,9 @@
-com\JonasEnterpriseAssociation\Servlets\Usuario.class
 model\Imovel.class
 conexao\Conexao.class
 DML\DaoUsuario.class
 model\Cliente.class
 DML\DaoCliente.class
 com\JonasEnterpriseAssociation\Servlets\Conexao.class
+com\JonasEnterpriseAssociation\Servlets\UsuarioTest.class
 model\Usuario.class
 com\JonasEnterpriseAssociation\Servlets\computador.class

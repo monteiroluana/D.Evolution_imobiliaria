@@ -1,4 +1,4 @@
-﻿CREATE DATABASE imobiliariadb;
+Create DATABASE imobiliariadb;
 USE imobiliariadb;
 
 CREATE TABLE imobiliariadb.USUARIO(
@@ -6,10 +6,10 @@ CREATE TABLE imobiliariadb.USUARIO(
 	nome varchar(255),
 	login varchar(30),
 	senha varchar (28),
+        email varchar (30),
 	grupoFilial varchar(50),
 	departamento varchar(50),
-	cargo varchar(50),
-	CONSTRAINT PK_USUARIO PRIMARY KEY (idUsuario)
+	cargo varchar(50)	
 );
 
 
@@ -28,10 +28,12 @@ CREATE TABLE imobiliariadb.CLIENTE(
 	cidade varchar(255),
 	uf varchar(20),
 	num varchar(10),
-	complemento varchar(255),
-	CONSTRAINT PK_CLIENTE PRIMARY KEY (idCliente)
+	complemento varchar(255)
+	
 );
 
+select * from usuario;
+drop table usuario;
 
 
 INSERT INTO imobiliariadb.USUARIO (nome,login,senha,grupoFilial,departamento,cargo) VALUES
