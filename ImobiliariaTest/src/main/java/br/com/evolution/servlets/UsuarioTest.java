@@ -9,6 +9,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import br.com.evolution.conexao.Conexao2;
+
 /**
  *
  * @author Jhonan
@@ -53,7 +55,7 @@ public class UsuarioTest {
     }
 
     public boolean adicionarUsuario() throws SQLException, ClassNotFoundException {
-        Conexao conexao = new Conexao();
+        Conexao2 conexao = new Conexao2();
         Connection conn = conexao.obterConexao();
         boolean success = false;
 
