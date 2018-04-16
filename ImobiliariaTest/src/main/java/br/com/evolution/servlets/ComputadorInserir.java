@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.evolution.dao.DaoUsuario;
 import br.com.evolution.model.Usuario;
 
-public class computador extends HttpServlet {
+public class ComputadorInserir extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -42,7 +42,7 @@ public class computador extends HttpServlet {
             
             
         } catch (SQLException ex) {
-            Logger.getLogger(computador.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ComputadorInserir.class.getName()).log(Level.SEVERE, null, ex);
         }
 
 //        criando lista os dados do usuario
@@ -64,7 +64,7 @@ public class computador extends HttpServlet {
             request.setAttribute("situacao", "Falha no cadastro!");
         }
         
-        request.getRequestDispatcher("computador.jsp").forward(request, response);
+        request.getRequestDispatcher("computadorInserir.jsp").forward(request, response);
 
     }
 
